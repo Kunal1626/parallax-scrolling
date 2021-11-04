@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Parallax Scrolling</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars" alt="">
+        <img src="moon.png" id="moon" alt="">
+        <img src="mountains_behind.png" id="mountains_behind" alt="">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>The moon shines because its surface reflects light from the sun. And despite the fact that it sometimes seems to shine very brightly, the moon reflects only between 3 and 12 percent of the sunlight that hits it.The perceived brightness of the moon from Earth depends on where the moon is in its orbit around the planet. The moon travels once around Earth every 29.5 days, and during its journey, it's lit from varying angles by the sun. This movement of the moon around the Earth — and the simultaneous orbiting of Earth around the sun — accounts for the moon's different phases (full moon, quarter moon, etc.). At any given point in the moon's trajectory around the Earth, only half of its surface is facing the sun, and therefore, only half of the moon is lit up. The other half of the surface faces away from the sun and is in shadow. The moon is at its brightest when it is 180 degrees away from the sun from our perspective (picture the sun, Earth and moon in a straight line). At this time, the full half of the moon's surface facing the sun is illuminated and is visible from Earth. This is what's known as a full moon.<br><br>The moon shines because its surface reflects light from the sun. And despite the fact that it sometimes seems to shine very brightly, the moon reflects only between 3 and 12 percent of the sunlight that hits it.The perceived brightness of the moon from Earth depends on where the moon is in its orbit around the planet. The moon travels once around Earth every 29.5 days, and during its journey, it's lit from varying angles by the sun. This movement of the moon around the Earth — and the simultaneous orbiting of Earth around the sun — accounts for the moon's different phases (full moon, quarter moon, etc.). At any given point in the moon's trajectory around the Earth, only half of its surface is facing the sun, and therefore, only half of the moon is lit up. The other half of the surface faces away from the sun and is in shadow. The moon is at its brightest when it is 180 degrees away from the sun from our perspective (picture the sun, Earth and moon in a straight line). At this time, the full half of the moon's surface facing the sun is illuminated and is visible from Earth. 
+            This is what's known as a full moon.<br><br>The moon shines because its surface reflects light from the sun. And despite the fact that it sometimes seems to shine very brightly, the moon reflects only between 3 and 12 percent of the sunlight that hits it.The perceived brightness of the moon from Earth depends on where the moon is in its orbit around the planet. The moon travels once around Earth every 29.5 days, and during its journey, it's lit from varying angles by the sun. This movement of the moon around the Earth — and the simultaneous orbiting of Earth around the sun — accounts for the moon's different phases (full moon, quarter moon, etc.). At any given point in the moon's trajectory around the Earth, only half of its surface is facing the sun, and therefore, only half of the moon is lit up. The other half of the surface faces away from the sun and is in shadow. The moon is at its brightest when it is 180 degrees away from the sun from our perspective (picture the sun, Earth and moon in a straight line). At this time, the full half of the moon's surface facing the sun is illuminated and is visible from Earth. This is what's known as a full moon.<br><br></p>
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front'); 
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+        
+    </script>
+</body>
+</html>
